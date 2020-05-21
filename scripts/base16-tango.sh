@@ -1,32 +1,32 @@
 #!/bin/sh
 # base16-shell (https://github.com/chriskempson/base16-shell)
 # Base16 Shell template by Chris Kempson (http://chriskempson.com)
-# Mellow Purple scheme by gidsi
+# Tango scheme by @Schnouki, based on the Tango Desktop Project
 
-color00="1e/05/28" # Base 00 - Black
-color01="00/d9/e9" # Base 08 - Red
-color02="05/cb/0d" # Base 0B - Green
-color03="95/5a/e7" # Base 0A - Yellow
-color04="55/00/68" # Base 0D - Blue
-color05="89/91/bb" # Base 0E - Magenta
-color06="b9/00/b1" # Base 0C - Cyan
-color07="ff/ee/ff" # Base 05 - White
-color08="32/0f/55" # Base 03 - Bright Black
+color00="2e/34/36" # Base 00 - Black
+color01="cc/00/00" # Base 08 - Red
+color02="4e/9a/06" # Base 0B - Green
+color03="c4/a0/00" # Base 0A - Yellow
+color04="34/65/a4" # Base 0D - Blue
+color05="75/50/7b" # Base 0E - Magenta
+color06="06/98/9a" # Base 0C - Cyan
+color07="d3/d7/cf" # Base 05 - White
+color08="55/57/53" # Base 03 - Bright Black
 color09=$color01 # Base 08 - Bright Red
 color10=$color02 # Base 0B - Bright Green
 color11=$color03 # Base 0A - Bright Yellow
 color12=$color04 # Base 0D - Bright Blue
 color13=$color05 # Base 0E - Bright Magenta
 color14=$color06 # Base 0C - Bright Cyan
-color15="f8/c0/ff" # Base 07 - Bright White
-color16="aa/00/a3" # Base 09
-color17="4d/6f/ff" # Base 0F
-color18="1a/09/2d" # Base 01
-color19="33/13/54" # Base 02
-color20="87/35/82" # Base 04
-color21="ff/ee/ff" # Base 06
-color_foreground="ff/ee/ff" # Base 05
-color_background="1e/05/28" # Base 00
+color15="ee/ee/ec" # Base 07 - Bright White
+color16="ef/29/29" # Base 09
+color17="34/e2/e2" # Base 0F
+color18="8a/e2/34" # Base 01
+color19="fc/e9/4f" # Base 02
+color20="72/9f/cf" # Base 04
+color21="ad/7f/a8" # Base 06
+color_foreground="d3/d7/cf" # Base 05
+color_background="2e/34/36" # Base 00
 
 if [ -n "$TMUX" ]; then
   # Tell tmux to pass the escape sequences through
@@ -78,13 +78,13 @@ put_template 21 $color21
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  put_template_custom Pg ffeeff # foreground
-  put_template_custom Ph 1e0528 # background
-  put_template_custom Pi ffeeff # bold color
-  put_template_custom Pj 331354 # selection color
-  put_template_custom Pk ffeeff # selected text color
-  put_template_custom Pl ffeeff # cursor
-  put_template_custom Pm 1e0528 # cursor text
+  put_template_custom Pg d3d7cf # foreground
+  put_template_custom Ph 2e3436 # background
+  put_template_custom Pi d3d7cf # bold color
+  put_template_custom Pj fce94f # selection color
+  put_template_custom Pk d3d7cf # selected text color
+  put_template_custom Pl d3d7cf # cursor
+  put_template_custom Pm 2e3436 # cursor text
 else
   put_template_var 10 $color_foreground
   if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]; then

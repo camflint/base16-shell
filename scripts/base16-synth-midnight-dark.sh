@@ -4,28 +4,28 @@
 # Synth Midnight Dark scheme by Michaël Ball (http://github.com/michael-ball/)
 
 color00="04/04/04" # Base 00 - Black
-color01="B5/3B/50" # Base 08 - Red
-color02="06/EA/61" # Base 0B - Green
-color03="DA/E8/4D" # Base 0A - Yellow
-color04="03/AE/FF" # Base 0D - Blue
-color05="EA/5C/E2" # Base 0E - Magenta
-color06="7C/ED/E9" # Base 0C - Cyan
-color07="DF/DB/DF" # Base 05 - White
-color08="61/50/7A" # Base 03 - Bright Black
+color01="b5/3b/50" # Base 08 - Red
+color02="06/ea/61" # Base 0B - Green
+color03="da/e8/4d" # Base 0A - Yellow
+color04="03/ae/ff" # Base 0D - Blue
+color05="ea/5c/e2" # Base 0E - Magenta
+color06="7c/ed/e9" # Base 0C - Cyan
+color07="df/db/df" # Base 05 - White
+color08="61/50/7a" # Base 03 - Bright Black
 color09=$color01 # Base 08 - Bright Red
 color10=$color02 # Base 0B - Bright Green
 color11=$color03 # Base 0A - Bright Yellow
 color12=$color04 # Base 0D - Bright Blue
 color13=$color05 # Base 0E - Bright Magenta
 color14=$color06 # Base 0C - Bright Cyan
-color15="FF/FB/FF" # Base 07 - Bright White
-color16="E4/60/0E" # Base 09
-color17="9D/4D/0E" # Base 0F
+color15="ff/fb/ff" # Base 07 - Bright White
+color16="e4/60/0e" # Base 09
+color17="9d/4d/0e" # Base 0F
 color18="14/14/14" # Base 01
 color19="24/24/24" # Base 02
-color20="BF/BB/BF" # Base 04
-color21="EF/EB/EF" # Base 06
-color_foreground="DF/DB/DF" # Base 05
+color20="bf/bb/bf" # Base 04
+color21="ef/eb/ef" # Base 06
+color_foreground="df/db/df" # Base 05
 color_background="04/04/04" # Base 00
 
 if [ -n "$TMUX" ]; then
@@ -78,12 +78,12 @@ put_template 21 $color21
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  put_template_custom Pg DFDBDF # foreground
+  put_template_custom Pg dfdbdf # foreground
   put_template_custom Ph 040404 # background
-  put_template_custom Pi DFDBDF # bold color
+  put_template_custom Pi dfdbdf # bold color
   put_template_custom Pj 242424 # selection color
-  put_template_custom Pk DFDBDF # selected text color
-  put_template_custom Pl DFDBDF # cursor
+  put_template_custom Pk dfdbdf # selected text color
+  put_template_custom Pl dfdbdf # cursor
   put_template_custom Pm 040404 # cursor text
 else
   put_template_var 10 $color_foreground
